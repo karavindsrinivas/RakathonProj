@@ -1,0 +1,41 @@
+/* myStyle.css */
+
+body {
+ background-color: #FF0000;
+ color: #000000;
+ background: url("https://ak2.picdn.net/shutterstock/videos/17197462/thumb/1.jpg") no-repeat center center fixed;
+ background-size:cover;
+}
+
+h1 {
+ color: white ;
+ text-align: center;
+ font: italic 200% fantasy;
+}
+nav {
+ color:Black;
+ text-align:center;
+}
+
+footer
+{
+ font-size:10px solid;
+ text-align:right;
+ color: white;
+}
+
+td{
+padding: 10px;
+}
+
+progress
+{
+  width:240px;
+}
+
+.tble{
+ background-color:#fff;
+ background-color:rgba(255,255,255,0.5);
+ border-radius: 30px;
+
+}

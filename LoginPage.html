@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+
+<link rel="stylesheet" type="text/css" href="LogStyle.css">
+
+<title>
+Restaurater - Login Page
+</title>
+
+</head>
+
+<body>
+
+<br /><br />
+<h1> Login for Restaurater</h1>
+
+<nav>
+<a href="LoginPage.html">Home</a>|
+<a href="LoginPage.html">Login</a>|
+<a href="LoginPage.html">About Us</a>|
+<a href="LoginPage.html">Terms and Conditions</a>
+</nav>
+
+<hr />
+
+<form name=Login action="LoginInserted.php" method="POST">
+
+<center>
+
+<table class="tble">
+
+<tr>
+<td>
+Username:
+</td>
+<td>
+<input type="Text" name= "uname" placeholder="Enter Username" required>
+</td>
+</tr>
+<tr>
+<td>
+Password:
+</td>
+<td>
+<input type="password" name= "password" placeholder="Enter Password" required>
+</td>
+</tr>
+<tr>
+<td>
+<input type="Submit" Value="Login" onclick="validator()">
+</td>
+<td>
+Remember Me? <input type="checkbox" unchecked name="remember">
+</td>
+</tr>
+<tr>
+<td>
+<a href="LoginPage.html">Forgot Password?</a>
+</td>
+<td>
+<a href="LoginPage.html">Not Registered? Sign Up Here!</a>
+</td>
+</tr>
+</center>
+</table>
+</form>
+
+<script>
+
+    function validate()
+    {
+      var x=document.Login.password.value;
+      if(x)
+      {
+        alert("Passwords do not match!")
+      }
+      if(!(document.Register.agree.checked))
+      {
+        alert("Please agree to the terms and conditions!");
+      }
+    }
+
+</script>
+
+</body>
+
+</html>

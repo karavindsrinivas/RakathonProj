@@ -1,0 +1,142 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+
+<title>
+Restaurater - Register
+</title>
+
+<link rel="stylesheet" type="text/css" href="RegStyle.css">
+
+</head>
+
+<body>
+
+<br /><br />
+<h1> Register for Restaurater</h1>
+
+<nav>
+<a href="HomePage.html">Home</a>|
+<a href="LoginPage.html">Login</a>|
+<a href="LoginPage.html">About Us</a>|
+<a href="LoginPage.html">Terms and Conditions</a>
+</nav>
+
+<hr />
+
+<form name="Register" action="inserted.php" method="POST">
+
+<center>
+
+<table  class="tble">
+
+<tr>
+<label><td >Enter Full Name:</td></label>
+<td><input type="Text" name= "fname" placeholder="Enter Name" required></td>
+</tr>
+
+<tr>
+<label><td>Enter New Username:</td></label>
+<td> <input type="Text" name= "uname" placeholder="Enter Username" required> </td>
+</tr>
+
+<tr>
+<label><td>Enter Email ID:</td></label>
+<td><input type="Email" name= "email" placeholder="Enter Username" required></td>
+</tr>
+
+<tr>
+<label><td>Enter Date of Birth:</td></label>
+<td><input type="date" name= "dob" placeholder="Enter Date of Birth" required></td>
+</tr>
+
+<tr>
+<label><td>Enter New Password:</td></label>
+<td><input type="password" id= "pwd" name= "password" placeholder="Enter Password" onkeyup="myfunction()" minlength=8 required></td>
+</tr>
+
+<tr>
+<label><td>Password Strength</td></label>
+<td><progress max="100" value="0" id="prog"></progress></td>
+</tr>
+
+<tr>
+<td>Confirm Password:</td>
+<td><input type="password" name= "conpassword" placeholder="Confirm Password" onkeyup=validate2() minlength=8 required></td>
+</tr>
+
+<tr colspan="2">
+<td><input type="checkbox" name="agree" unchecked required>I Agree to all the <a href="LoginPage.html">terms and conditions</a></td>
+</tr>
+
+<tr>
+<td ><input type="Submit" Value="Register" onclick="return validate()"></td>
+<td><a href="LoginPage.html"> Already Have an Account? Log in!</a>
+</tr>
+
+</table>
+
+</center>
+
+</form>
+
+<br /><br /><br />
+<hr />
+
+<script>
+
+function validate2(){
+  var x=document.Register.password.value;
+  var y=document.Register.conpassword.value;
+  if(x!=y)
+  {
+    document.Register.conpassword.style.borderWidth = "thick";
+    document.Register.conpassword.style.borderColor = "#E34234";
+  }
+  else {
+      document.Register.conpassword.style.borderColor = "green";
+  }
+
+}
+
+function myfunction(){
+  var x=document.getElementById("pwd");
+  var y=document.getElementById("prog");
+  var s=0;
+  if(x.value.match( /[a-z]/)) {
+    s+=2;
+  }
+  if(x.value.match(/[A-Z]/)) {
+    s+=3;
+  }
+  if(x.value.match(/[0-9]/)) {
+    s+=3;
+  }
+  if(x.value.length >= 8) {
+    s+=2;
+  }
+  y.value = s*10;
+}
+
+
+    function validate()
+    {
+      if(!(document.Register.agree.checked))
+      {
+          alert("Please agree to the terms and conditions!");
+      }
+      else
+      {
+        return true;
+      }
+    }
+
+</script>
+
+<footer>
+Project by K.Aravind Srinivas RA1511003010676
+</footer>
+
+</body>
+</html>
